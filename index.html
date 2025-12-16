@@ -3,22 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RRR Fan Site | WebWiz Showcase</title>
+    <title>RRR Fan Site | Rise Roar Revolt</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-gray-900 text-white font-sans">
+<body class="bg-gray-900 text-white font-sans antialiased">
 
-    <nav class="p-5 bg-black text-center">
-        <h1 class="text-3xl font-bold text-red-600">RRR FANSITE</h1>
-        <p class="text-yellow-500">Setup Successful!</p>
+    <nav class="bg-black/90 text-white fixed w-full top-0 z-50 shadow-lg backdrop-blur-sm border-b border-gray-800">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            
+            <a href="index.html" class="text-3xl font-black tracking-widest hover:scale-105 transition-transform duration-300">
+                <span class="text-red-600">R</span><span class="text-white">R</span><span class="text-blue-600">R</span>
+            </a>
+
+            <div class="hidden md:flex space-x-8 text-lg font-bold tracking-wide">
+                <a href="index.html" class="hover:text-red-500 transition-colors duration-300">HOME</a>
+                <a href="characters.html" class="hover:text-blue-500 transition-colors duration-300">CHARACTERS</a>
+                <a href="songs.html" class="hover:text-yellow-500 transition-colors duration-300">SONGS</a>
+                <a href="gallery.html" class="hover:text-red-500 transition-colors duration-300">GALLERY</a>
+                <a href="about.html" class="hover:text-blue-500 transition-colors duration-300">ABOUT</a>
+            </div>
+
+            <button id="menu-btn" class="md:hidden text-2xl text-yellow-500 hover:text-white transition">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900 border-t border-gray-800">
+            <a href="index.html" class="block py-3 px-4 hover:bg-gray-800 hover:text-red-500 transition">HOME</a>
+            <a href="characters.html" class="block py-3 px-4 hover:bg-gray-800 hover:text-blue-500 transition">CHARACTERS</a>
+            <a href="songs.html" class="block py-3 px-4 hover:bg-gray-800 hover:text-yellow-500 transition">SONGS</a>
+            <a href="gallery.html" class="block py-3 px-4 hover:bg-gray-800 hover:text-red-500 transition">GALLERY</a>
+            <a href="about.html" class="block py-3 px-4 hover:bg-gray-800 hover:text-blue-500 transition">ABOUT</a>
+        </div>
     </nav>
+    <div class="h-screen flex items-center justify-center bg-gray-800">
+        <h1 class="text-4xl text-gray-500">Hero Section Coming Soon...</h1>
+    </div>
 
-    <main class="h-screen flex items-center justify-center">
-        <h2 class="text-2xl">If you see this, your HTML & CSS are working.</h2>
-    </main>
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
 
 </body>
 </html>
