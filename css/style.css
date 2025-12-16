@@ -1,5 +1,29 @@
-/* Custom Styles for RRR Showcase */
-body {
-    /* Just a backup background color to test connection */
-    background-color: #111827; 
+:root {
+    --theme-color: #dc2626;
+    --theme-glow: rgba(220, 38, 38, 0.5);
+}
+
+.water-mode {
+    --theme-color: #2563eb;
+    --theme-glow: rgba(37, 99, 235, 0.5);
+}
+
+.text-theme {
+    color: var(--theme-color);
+    transition: color 0.5s ease;
+}
+
+.bg-theme {
+    background-color: var(--theme-color);
+    transition: background-color 0.5s ease;
+}
+
+.border-theme {
+    border-color: var(--theme-color);
+    transition: border-color 0.5s ease;
+}
+
+.shadow-theme {
+    box-shadow: 0 4px 20px var(--theme-glow);
+    transition: box-shadow 0.5s ease;
 }
