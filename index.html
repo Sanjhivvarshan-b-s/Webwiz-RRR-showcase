@@ -10,27 +10,37 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/script.js" defer></script>
 </head>
-<body class="bg-gray-900 text-white font-sans antialiased">
+<body class="bg-gray-900 text-white font-sans antialiased transition-colors duration-500">
 
     <nav class="bg-black/90 text-white fixed w-full top-0 z-50 shadow-lg backdrop-blur-sm border-b border-gray-800">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             
             <a href="index.html" class="text-3xl font-black tracking-widest hover:scale-105 transition-transform duration-300">
-                <span class="text-red-600">R</span><span class="text-white">R</span><span class="text-blue-600">R</span>
+                <span class="text-theme">R</span><span class="text-white">R</span><span class="text-theme">R</span>
             </a>
 
             <div class="hidden md:flex space-x-8 text-lg font-bold tracking-wide">
-                <a href="index.html" class="hover:text-red-500 transition-colors duration-300">HOME</a>
-                <a href="characters.html" class="hover:text-blue-500 transition-colors duration-300">CHARACTERS</a>
-                <a href="songs.html" class="hover:text-yellow-500 transition-colors duration-300">SONGS</a>
-                <a href="gallery.html" class="hover:text-red-500 transition-colors duration-300">GALLERY</a>
-                <a href="about.html" class="hover:text-blue-500 transition-colors duration-300">ABOUT</a>
+                <a href="index.html" class="hover:text-gray-400 transition">HOME</a>
+                <a href="characters.html" class="hover:text-gray-400 transition">CHARACTERS</a>
+                <a href="songs.html" class="hover:text-gray-400 transition">SONGS</a>
+                <a href="gallery.html" class="hover:text-gray-400 transition">GALLERY</a>
+                <a href="about.html" class="hover:text-gray-400 transition">ABOUT</a>
             </div>
 
-            <button id="menu-btn" class="md:hidden text-2xl text-yellow-500 hover:text-white transition">
-                <i class="fas fa-bars"></i>
-            </button>
+            <div class="flex items-center space-x-4">
+                
+                <button id="theme-btn" class="text-xl hover:scale-110 transition p-2 rounded-full border border-gray-700 bg-gray-800 w-10 h-10 flex items-center justify-center shadow-lg group">
+                    <i id="theme-icon" class="fas fa-fire text-red-600 group-hover:text-white transition"></i>
+                </button>
+
+                <button id="menu-btn" class="md:hidden text-2xl text-yellow-500 hover:text-white transition">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
         </div>
 
         <div id="mobile-menu" class="hidden md:hidden bg-gray-900 border-t border-gray-800">
@@ -41,18 +51,34 @@
             <a href="about.html" class="block py-3 px-4 hover:bg-gray-800 hover:text-blue-500 transition">ABOUT</a>
         </div>
     </nav>
-    <div class="h-screen flex items-center justify-center bg-gray-800">
-        <h1 class="text-4xl text-gray-500">Hero Section Coming Soon...</h1>
-    </div>
 
-    <script>
-        const btn = document.getElementById('menu-btn');
-        const menu = document.getElementById('mobile-menu');
+    <header class="relative h-screen flex items-center justify-center overflow-hidden">
+        
+        <div class="absolute inset-0 z-0 bg-black">
+            <img src="assets/images/hero-bg.jpg" alt="RRR Movie Scene" class="w-full h-full object-cover opacity-80">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/20 to-gray-900"></div>
+        </div>
 
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-    </script>
+        <div class="relative z-10 text-center px-4 mt-16">
+            
+            <h1 class="text-5xl md:text-8xl font-black tracking-tighter mb-6 drop-shadow-2xl">
+                <span class="text-theme">RISE</span> 
+                <span class="text-gray-200">.</span>
+                <span class="text-yellow-500">ROAR</span> 
+                <span class="text-gray-200">.</span>
+                <span class="text-theme">REVOLT</span>
+            </h1>
+
+            <p class="text-xl md:text-2xl text-gray-300 mb-10 font-light tracking-wide max-w-2xl mx-auto">
+                Witness the epic saga of friendship, fire, and destiny.
+            </p>
+
+            <a href="characters.html" class="inline-block px-10 py-4 bg-theme text-white font-bold rounded-full shadow-theme 
+                hover:scale-105 hover:shadow-2xl transition-all duration-300 transform">
+                EXPLORE THE LEGEND
+            </a>
+        </div>
+    </header>
 
 </body>
 </html>
