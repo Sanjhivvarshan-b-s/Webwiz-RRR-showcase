@@ -25,3 +25,26 @@ if (themeBtn) {
         }
     });
 }
+
+document.addEventListener('mousemove', function(e) {
+    
+    let spark = document.createElement('div');
+    spark.className = 'spark'; 
+
+    spark.style.left = e.pageX + 'px';
+    spark.style.top = e.pageY + 'px';
+
+    if (Math.random() > 0.5) {
+        spark.style.backgroundColor = '#dc2626'; 
+        spark.style.boxShadow = '0 0 10px #dc2626'; 
+    } else {
+        spark.style.backgroundColor = '#2563eb'; 
+        spark.style.boxShadow = '0 0 10px #2563eb'; 
+    }
+
+    document.body.appendChild(spark);
+
+    setTimeout(function() {
+        spark.remove();
+    }, 800);
+});
